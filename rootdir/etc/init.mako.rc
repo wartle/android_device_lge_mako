@@ -18,14 +18,10 @@ import init.mako.power.rc
 import init.mako.usb.rc
 
 on early-init
-    mkdir /firmware 0771 system system
     mount debugfs debugfs /sys/kernel/debug
     chown system system /sys/kernel/debug/kgsl/proc
 
 on init
-    # Set permissions for persist partition
-    mkdir /persist 0771 system system
-
     # Setup custom emergency number list based on
     # the MCC. This is needed by RIL.
     setprop persist.radio.custom_ecc "1"
@@ -156,15 +152,12 @@ on post-fs-data
     mkdir /data/misc/location 0770 gps gps
     mkdir /data/misc/location/gpsone_d 0770 system gps
 
-    # Mounting of persist is moved to 'on emmc-fs' and 'on fs' sections
-    # We chown/chmod /persist again so because mount is run as root + defaults
-    chown system system /persist
+    # Chown polling nodes as needed from UI running on system server
     chmod 0664 /sys/devices/platform/msm_sdcc.1/polling
     chmod 0664 /sys/devices/platform/msm_sdcc.2/polling
     chmod 0664 /sys/devices/platform/msm_sdcc.3/polling
     chmod 0664 /sys/devices/platform/msm_sdcc.4/polling
 
-    # Chown polling nodes as needed from UI running on system server
     chown system system /sys/devices/platform/msm_sdcc.1/polling
     chown system system /sys/devices/platform/msm_sdcc.2/polling
     chown system system /sys/devices/platform/msm_sdcc.3/polling
