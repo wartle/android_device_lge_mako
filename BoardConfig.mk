@@ -138,6 +138,9 @@ TARGET_USES_MEDIA_EXTENSIONS := true
 # LineageOS Hardware
 BOARD_HARDWARE_CLASS := $(PLATFORM_PATH)/lineagehw/
 
+# Fonts
+EXCLUDE_SERIF_FONTS := true
+
 # Recovery
 # RECOVERY_VARIANT := twrp
 
