@@ -47,6 +47,9 @@ TARGET_BOOTLOADER_NAME := mako
 # Binder API version
 TARGET_USES_64_BIT_BINDER := true
 
+# Shipping API
+PRODUCT_SHIPPING_API_LEVEL := 17
+
 # QCOM hardware
 BOARD_USES_QCOM_HARDWARE := true
 
