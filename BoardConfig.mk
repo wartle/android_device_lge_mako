@@ -131,8 +131,9 @@ TARGET_NEEDS_PLATFORM_TEXT_RELOCATIONS := true
 # Legacy memfd
 TARGET_HAS_MEMFD_BACKPORT := true
 
-# Exclude serif fonts for saving system.img size.
+# Fonts
 EXCLUDE_SERIF_FONTS := true
+SMALLER_FONT_FOOTPRINT := true
 
 # Recovery
 TARGET_RECOVERY_FSTAB := $(PLATFORM_PATH)/rootdir/etc/fstab.mako
