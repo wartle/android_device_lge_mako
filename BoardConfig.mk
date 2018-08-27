@@ -145,6 +145,7 @@ BOARD_HARDWARE_CLASS := $(PLATFORM_PATH)/lineagehw/
 
 # Fonts
 EXCLUDE_SERIF_FONTS := true
+SMALLER_FONT_FOOTPRINT := true
 
 # Recovery
 # RECOVERY_VARIANT := twrp
