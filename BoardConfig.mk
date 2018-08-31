@@ -125,6 +125,11 @@ BOARD_SEPOLICY_DIRS += $(PLATFORM_PATH)/sepolicy
 USE_DEVICE_SPECIFIC_CAMERA := true
 USE_DEVICE_SPECIFIC_QCOM_PROPRIETARY := true
 
+TARGET_PROCESS_SDK_VERSION_OVERRIDE := \
+    /system/bin/cameraserver=22 \
+    /system/bin/mediaserver=22 \
+    /system/vendor/bin/mm-qcamera-daemon=22
+
 # QCOM Media Extensions
 TARGET_USES_MEDIA_EXTENSIONS := true
 
