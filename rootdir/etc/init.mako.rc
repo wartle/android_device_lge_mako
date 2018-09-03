@@ -240,11 +240,6 @@ on post-fs-data
     restorecon /sys/devices/platform/mipi_lgit.1537/kgamma_b
     restorecon /sys/devices/platform/mipi_lgit.1537/kgamma_apply
 
-service rmt_storage /vendor/bin/rmt_storage
-    class core
-    user root
-    group system wakelock
-
 service hciattach /vendor/bin/init.mako.bt.sh
     class late_start
     user bluetooth
