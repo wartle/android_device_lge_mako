@@ -19,6 +19,9 @@
 
 /dev/bcm2079x-i2c                      u:object_r:nfc_device:s0
 
+# CPU governor controls
+/dev/socket/mpdecision(/.*)?           u:object_r:mpdecision_socket:s0
+
 ## Radio related
 # modem driver
 /dev/mdm                               u:object_r:radio_device:s0
@@ -84,31 +87,31 @@
 /dev/block/platform/msm_sdcc\.1/by-name/boot        u:object_r:boot_block_device:s0
 /dev/block/platform/msm_sdcc\.1/by-name/persist     u:object_r:persist_block_device:s0
 
-/data/cam_socket[0-9]                  u:object_r:camera_socket:s0
-/data/app/sensor_ctl_socket            u:object_r:sensors_socket:s0
+/dev/socket/qcamera(/.*)?              u:object_r:camera_socket:s0
+/dev/socket/sensors(/.*)?              u:object_r:sensors_socket:s0
 
 /data/fdAlbum                          u:object_r:camera_data_file:s0
 /data/misc/playready(/.*)?             u:object_r:drm_data_file:s0
-/data/misc/sensors(/.*)?               u:object_r:sensors_data_file:s0
 /data/nfc(/.*)?                        u:object_r:nfc_data_file:s0
-/data/qcks(/.*)?                       u:object_r:kickstart_data_file:s0
-/data/system/sensors(/.*)?             u:object_r:sensors_data_file:s0
+/data/vendor/qcks(/.*)?                u:object_r:kickstart_vendor_data_file:s0
+/data/vendor/sensors(/.*)?             u:object_r:sensors_vendor_data_file:s0
 
 /system/vendor/bin/conn_init           u:object_r:conn_init_exec:s0
 /system/vendor/bin/hci_qcomm_init      u:object_r:hci_attach_exec:s0
 /system/vendor/bin/mm-qcamera-daemon   u:object_r:camera_exec:s0
+/system/vendor/bin/mpdecision          u:object_r:mpdecision_exec:s0
 /system/vendor/bin/netmgrd             u:object_r:netmgrd_exec:s0
 /system/vendor/bin/qmuxd               u:object_r:qmux_exec:s0
 /system/vendor/bin/qseecomd            u:object_r:tee_exec:s0
-/system/vendor/bin/rmt_storage         u:object_r:rmt_exec:s0
 /system/vendor/bin/sensors\.qcom       u:object_r:sensors_exec:s0
+/system/vendor/bin/thermald            u:object_r:thermald_exec:s0
 /system/vendor/bin/bdAddrLoader        u:object_r:bluetooth_loader_exec:s0
 
 /system/vendor/bin/init\.mako\.bt\.sh      u:object_r:bluetooth_loader_exec:s0
 /system/vendor/bin/init\.mako\.wifi\.sh    u:object_r:conn_init_exec:s0
 
-/system/vendor/bin/init\.qcom\.devstart\.sh            u:object_r:init-qcom-devstart-sh_exec:s0
-/system/vendor/bin/init\.qcom\.devwait\.sh             u:object_r:init-qcom-devwait-sh_exec:s0
+/system/vendor/bin/init\.qcom\.devstart\.sh    u:object_r:init-qcom-devstart-sh_exec:s0
+/system/vendor/bin/init\.qcom\.devwait\.sh     u:object_r:init-qcom-devwait-sh_exec:s0
 
 /system/vendor/bin/efsks               u:object_r:kickstart_exec:s0
 /system/vendor/bin/ks                  u:object_r:kickstart_exec:s0
@@ -122,5 +125,10 @@
 /persist/widevine(/.*)?                u:object_r:persist_drm_file:s0
 /persist/wifi(/.*)?                    u:object_r:persist_wifi_file:s0
 
+# Sysfs files used for temperature sensors
+/sys/class/thermal(/.*)?               u:object_r:sysfs_thermal:s0
+/sys/devices/virtual/thermal(/.*)?     u:object_r:sysfs_thermal:s0
+/sys/module/msm_thermal(/.*)?          u:object_r:sysfs_thermal:s0
+
 # Sysfs entry for audio
-/sys/kernel/boot_adsp/boot         u:object_r:sysfs_audio:s0
+/sys/kernel/boot_adsp/boot             u:object_r:sysfs_audio:s0

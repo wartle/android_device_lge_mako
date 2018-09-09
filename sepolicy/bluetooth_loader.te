@@ -24,6 +24,10 @@ r_dir_file(bluetooth_loader, persist_bluetooth_file)
 set_prop(bluetooth, bluetooth_prop)
 set_prop(bluetooth_loader, bluetooth_prop)
 
+# Set vendor.bluetooth.* property values
+set_prop(bluetooth, vendor_default_prop)
+set_prop(bluetooth_loader, vendor_default_prop)
+
 # Allow getprop/setprop for init.mako.bt.sh
 allow bluetooth_loader system_file:file execute_no_trans;
 allow bluetooth_loader toolbox_exec:file rx_file_perms;
