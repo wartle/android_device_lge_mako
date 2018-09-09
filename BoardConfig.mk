@@ -141,7 +141,7 @@ TARGET_PROCESS_SDK_VERSION_OVERRIDE := \
 TARGET_USES_MEDIA_EXTENSIONS := true
 
 # LineageOS Hardware
-BOARD_HARDWARE_CLASS := $(PLATFORM_PATH)/lineagehw/
+JAVA_SOURCE_OVERLAYS := org.lineageos.hardware|$(PLATFORM_PATH)/lineagehw|**/*.java
 
 # Fonts
 EXCLUDE_SERIF_FONTS := true
