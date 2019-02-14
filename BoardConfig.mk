@@ -56,10 +56,6 @@ BOARD_USES_LEGACY_ALSA_AUDIO := false
 BOARD_USES_FLUENCE_INCALL := true
 BOARD_USES_SEPERATED_AUDIO_INPUT := true
 
-# AOSP Audio Variant (TODO: Switch to CAF variant)
-USE_DEVICE_SPECIFIC_AUDIO := true
-DEVICE_SPECIFIC_AUDIO_PATH := hardware/qcom/audio/default
-
 # Bluetooth
 BOARD_HAVE_BLUETOOTH := true
 BOARD_HAVE_BLUETOOTH_QCOM := true
