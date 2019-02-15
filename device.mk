@@ -212,6 +212,11 @@ PRODUCT_PACKAGES += \
     ueventd.rc \
     ueventd.mako.rc
 
+# Releasetools
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/prebuilt/bin/parted:install/bin/parted \
+    $(LOCAL_PATH)/prebuilt/bin/repartition.sh:install/bin/repartition.sh
+
 # RenderScript HAL
 PRODUCT_PACKAGES += \
     android.hardware.renderscript@1.0-impl
