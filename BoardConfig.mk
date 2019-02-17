@@ -130,6 +130,7 @@ TARGET_KEYMASTER_SKIP_WAITING_FOR_QSEE := true
 TARGET_RELEASETOOLS_EXTENSIONS := $(PLATFORM_PATH)
 
 # SeLinux Policy
+include device/qcom/sepolicy-legacy/sepolicy.mk
 BOARD_SEPOLICY_DIRS += $(PLATFORM_PATH)/sepolicy
 
 # Camera
