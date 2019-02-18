@@ -23,6 +23,7 @@ type proc_wakelocks, fs_type, proc_type;
 type sysfs_block_iosched, fs_type, sysfs_type;
 type sysfs_block_read_ahead_kb, fs_type, sysfs_type;
 type sysfs_graphics, fs_type, sysfs_type;
+type sysfs_kcal, fs_type, sysfs_type;
 type sysfs_mpdecision, fs_type, sysfs_type;
 type sysfs_msm_subsys, fs_type, sysfs_type;
 type sysfs_soc, fs_type, sysfs_type;

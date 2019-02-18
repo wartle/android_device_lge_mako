@@ -13,12 +13,12 @@ genfscon sysfs /devices/virtual/graphics/fb1                                    
 genfscon sysfs /devices/virtual/graphics/fb2                                     u:object_r:sysfs_graphics:s0
 
 # kcal color control
-genfscon sysfs /devices/platform/kcal_ctrl.0/kcal                                u:object_r:sysfs_graphics:s0
-genfscon sysfs /devices/platform/kcal_ctrl.0/kcal_ctrl                           u:object_r:sysfs_graphics:s0
-genfscon sysfs /devices/platform/mipi_lgit.1537/kgamma_r                         u:object_r:sysfs_graphics:s0
-genfscon sysfs /devices/platform/mipi_lgit.1537/kgamma_g                         u:object_r:sysfs_graphics:s0
-genfscon sysfs /devices/platform/mipi_lgit.1537/kgamma_b                         u:object_r:sysfs_graphics:s0
-genfscon sysfs /devices/platform/mipi_lgit.1537/kgamma_apply                     u:object_r:sysfs_graphics:s0
+genfscon sysfs /devices/platform/kcal_ctrl.0/kcal                                u:object_r:sysfs_kcal:s0
+genfscon sysfs /devices/platform/kcal_ctrl.0/kcal_ctrl                           u:object_r:sysfs_kcal:s0
+genfscon sysfs /devices/platform/mipi_lgit.1537/kgamma_r                         u:object_r:sysfs_kcal:s0
+genfscon sysfs /devices/platform/mipi_lgit.1537/kgamma_g                         u:object_r:sysfs_kcal:s0
+genfscon sysfs /devices/platform/mipi_lgit.1537/kgamma_b                         u:object_r:sysfs_kcal:s0
+genfscon sysfs /devices/platform/mipi_lgit.1537/kgamma_apply                     u:object_r:sysfs_kcal:s0
 
 # thermald
 genfscon sysfs /devices/virtual/thermal                                          u:object_r:sysfs_thermal:s0
