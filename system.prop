@@ -9,7 +9,6 @@ qcom.hw.aac.encoder=true
 media.aac_51_output_enabled=true
 
 # Bluetooth
-vendor.qcom.bluetooth.soc=pronto
 ro.qualcomm.bt.hci_transport=smd
 
 # Camera
