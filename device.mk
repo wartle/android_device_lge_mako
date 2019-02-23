@@ -258,14 +258,13 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.usb@1.0-service.basic
 
-# Wifi
+# Wi-Fi
 PRODUCT_PACKAGES += \
     android.hardware.wifi@1.0-service \
-    conn_init \
-    dhcpcd.conf \
-    wificond \
+    libwpa_client \
     hostapd \
-    libwfcu \
+    wificond \
+    wifilogd \
     wpa_supplicant \
     wpa_supplicant.conf
 
