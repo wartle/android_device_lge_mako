@@ -19,22 +19,22 @@ import re
 
 def FullOTA_InstallBegin(info):
   info.script.Mount("/system")
-  resizeSystemPartition(info)
+  checkSystemPartitionSize(info)
   info.script.Unmount("/system")
   return
 
 def IncrementalOTA_InstallBegin(info):
   info.script.Mount("/system")
-  resizeSystemPartition(info)
+  checkSystemPartitionSize(info)
   info.script.Unmount("/system")
   return
 
-def resizeSystemPartition(info):
+def checkSystemPartitionSize(info):
   info.script.AppendExtra('package_extract_file("install/bin/parted", "/tmp/parted");');
-  info.script.AppendExtra('package_extract_file("install/bin/repartition.sh", "/tmp/repartition.sh");');
+  info.script.AppendExtra('package_extract_file("install/bin/sizecheck.sh", "/tmp/sizecheck.sh");');
   info.script.AppendExtra('set_metadata("/tmp/parted", "uid", 0, "gid", 0, "mode", 0755);');
-  info.script.AppendExtra('set_metadata("/tmp/repartition.sh", "uid", 0, "gid", 0, "mode", 0755);');
-  info.script.AppendExtra('ui_print("Checking size of the partitions...");');
-  info.script.AppendExtra('if run_program("/tmp/repartition.sh") == 0 then');
-  info.script.AppendExtra('abort("Invalid partition table detected. Perhaps, you already tried to resize your partitions. You must restore original partition table before installation");');
+  info.script.AppendExtra('set_metadata("/tmp/sizecheck.sh", "uid", 0, "gid", 0, "mode", 0755);');
+  info.script.AppendExtra('ui_print("Checking size of the /system partition...");');
+  info.script.AppendExtra('if run_program("/tmp/sizecheck.sh") == 0 then');
+  info.script.AppendExtra('abort("Too small /system partition detected (must be at least 1333788672 bytes). You need to repartition your device before installing this ROM.");');
   info.script.AppendExtra('endif;');
