@@ -405,6 +405,14 @@
         <ctl name="SLIM_0_TX Channels" value="Two" />
     </path>
 
+    <path name="handset-stereo-dmic-ef">
+        <path name="dmic-endfire" />
+    </path>
+
+    <path name="speaker-stereo-dmic-ef">
+        <path name="speaker-dmic-endfire" />
+    </path>
+
     <path name="voice-dmic-ef-tmus">
         <path name="dmic-endfire" />
     </path>
