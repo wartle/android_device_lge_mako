@@ -33,3 +33,5 @@ allow camera storage_file:dir rw_dir_perms;
 allow camera storage_file:lnk_file rw_file_perms;
 allow camera mnt_user_file:dir rw_dir_perms;
 allow camera fuse:dir rw_dir_perms;
+
+r_dir_file(camera, camera_prop)

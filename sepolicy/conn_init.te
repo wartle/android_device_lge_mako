@@ -16,7 +16,7 @@ allow conn_init persist_wifi_file:file r_file_perms;
 allow conn_init wifi_data_file:dir w_dir_perms;
 allow conn_init wifi_data_file:file create_file_perms;
 
-allow conn_init wlan_device:chr_file rw_file_perms;
+allow conn_init wcnss_device:chr_file rw_file_perms;
 
 # init.mako.wifi.sh runs toolbox
 allow conn_init system_file:file execute_no_trans;

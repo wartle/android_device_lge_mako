@@ -1,2 +1,1 @@
 type ctl_rmt_prop, property_type;
-type vendor_bluetooth_prop, property_type;
