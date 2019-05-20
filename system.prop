@@ -26,6 +26,7 @@ persist.hwc.mdpcomp.enable=true
 debug.hwui.use_buffer_age=false
 
 # Media
+debug.stagefright.ccodec=0
 ro.config.media_vol_steps=25
 ro.config.vc_call_vol_steps=7
 media.aac_51_output_enabled=true
