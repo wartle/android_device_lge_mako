@@ -82,6 +82,9 @@
 /system/vendor/bin/hw/vendor\.lineage\.livedisplay@2\.0-service\.mako u:object_r:hal_lineage_livedisplay_sysfs_exec:s0
 /system/vendor/bin/hw/android\.hardware\.power@1\.0-service\.mako     u:object_r:hal_power_default_exec:s0
 
+# Gatekeeper
+/(vendor|system/vendor)/bin/hw/android\.hardware\.gatekeeper@1\.0-service\.software			u:object_r:hal_gatekeeper_default_exec:s0
+
 # Persist firmware filesystem
 /persist/playready(/.*)?               u:object_r:persist_drm_file:s0
 /persist/widevine(/.*)?                u:object_r:persist_drm_file:s0
