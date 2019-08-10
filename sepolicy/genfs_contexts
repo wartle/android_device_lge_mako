@@ -16,6 +16,10 @@ genfscon sysfs /module/pm8921_charger/parameters/thermal_mitigation             
 genfscon sysfs /devices/platform/msm_fb.525825/leds/lcd-backlight                u:object_r:sysfs_leds:s0
 genfscon sysfs /devices/platform/msm_ssbi.0/pm8921-core/pm8xxx-led               u:object_r:sysfs_leds:s0
 
+# MMC
+genfscon sysfs /devices/platform/msm_sdcc.1/mmc_host/mmc0/mmc0:0001/rev                     u:object_r:sysfs_disk_stat:s0
+genfscon sysfs /devices/platform/msm_sdcc.1/mmc_host/mmc0/mmc0:0001/block/mmcblk0/stat      u:object_r:sysfs_disk_stat:s0
+
 # Power
 genfscon sysfs /devices/platform/bq51051b_wlc/power_supply                          u:object_r:sysfs_batteryinfo:s0
 genfscon sysfs /devices/platform/msm_ssbi.0/pm8921-core/pm8921-charger/power_supply u:object_r:sysfs_batteryinfo:s0
