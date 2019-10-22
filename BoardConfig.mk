@@ -119,9 +119,6 @@ include device/qcom/sepolicy-legacy/sepolicy.mk
 BOARD_SEPOLICY_DIRS += $(PLATFORM_PATH)/sepolicy
 
 # Camera
-USE_DEVICE_SPECIFIC_CAMERA := true
-USE_DEVICE_SPECIFIC_QCOM_PROPRIETARY := true
-
 TARGET_PROCESS_SDK_VERSION_OVERRIDE := \
     /system/bin/cameraserver=22 \
     /system/bin/mediaserver=22 \
