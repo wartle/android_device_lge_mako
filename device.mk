@@ -229,6 +229,10 @@ PRODUCT_PACKAGES += \
     init.qcom.devwait.sh \
     ueventd.mako.rc
 
+# Recorder
+PRODUCT_PACKAGES += \
+    Recorder
+
 # Releasetools
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/prebuilt/bin/parted:install/bin/parted \
