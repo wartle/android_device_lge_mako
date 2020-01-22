@@ -115,8 +115,9 @@ PRODUCT_PACKAGES += \
 
 # GPS
 PRODUCT_PACKAGES += \
+    gps.msm8960 \
     gps.conf \
-    gps.msm8960
+    sap.conf
 
 # GNSS HAL
 PRODUCT_PACKAGES += \
