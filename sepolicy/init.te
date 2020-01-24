@@ -15,3 +15,6 @@ allow init {
     sysfs_usb
     sysfs_wlan_fwpath
 }:file setattr;
+
+allow init proc_cpu_alignment:file rw_file_perms;
+allow init proc_last_kmsg:file { r_file_perms setattr };
