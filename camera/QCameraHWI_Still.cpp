@@ -2130,11 +2130,11 @@ void QCameraStream_Snapshot::handleError()
     case SNAPSHOT_STATE_JPEG_ENCODING:
         if(mJpegHeap != NULL) mJpegHeap.clear();
         mJpegHeap = NULL;
-        break;
+        [[fallthrough]];
     case SNAPSHOT_STATE_YUV_RECVD:
     case SNAPSHOT_STATE_IMAGE_CAPTURE_STRTD:
         stopPolling();
-        break;
+        [[fallthrough]];
     case SNAPSHOT_STATE_INITIALIZED:
     case SNAPSHOT_STATE_BUF_INITIALIZED:
         if (mSnapshotFormat == PICTURE_FORMAT_JPEG) {
@@ -2143,7 +2143,7 @@ void QCameraStream_Snapshot::handleError()
         {
             deinitRawSnapshotBuffers();
         }
-        break;
+        [[fallthrough]];
     case SNAPSHOT_STATE_BUF_NOTIF_REGD:
     case SNAPSHOT_STATE_CH_ACQUIRED:
         if (mSnapshotFormat == PICTURE_FORMAT_JPEG) {
@@ -2152,7 +2152,7 @@ void QCameraStream_Snapshot::handleError()
         {
             deinitSnapshotChannel(MM_CAMERA_CH_RAW);
         }
-        break;
+        [[fallthrough]];
     default:
         /* Set the state to ERROR */
         setSnapshotState(SNAPSHOT_STATE_ERROR);
