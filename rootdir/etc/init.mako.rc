@@ -31,20 +31,8 @@ on init
     setprop persist.radio.custom_ecc_hard "911,*911,#911,112,999,000,08,118,120,122,110,119,995,111,113,125,127,133"
 
 on fs
-    mount_all /vendor/etc/fstab.mako --early
+    mount_all /vendor/etc/fstab.mako
     restorecon_recursive /persist
-
-    # Start HW service manager early
-    start hwservicemanager
-
-on late-fs
-    # Start services for bootanim
-    start vendor.configstore-hal
-    start surfaceflinger
-    start bootanim
-    start vendor.gralloc-2-0
-
-    mount_all /vendor/etc/fstab.mako --late
 
 on early-boot
     # set RLIMIT_MEMLOCK to 64MB
