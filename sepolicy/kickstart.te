@@ -13,6 +13,7 @@ allow kickstart mdm_device:chr_file r_file_perms;
 # Access USB host ks bridge drivers
 allow kickstart efsbridgehsic_device:chr_file rw_file_perms;
 allow kickstart ksbridgehsic_device:chr_file rw_file_perms;
+allow kickstart usbfs:dir search;
 
 # Read and write to /dev/block/mmcblk0p[89]
 allow kickstart efs_boot_dev:blk_file rw_file_perms;
