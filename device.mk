@@ -233,6 +233,9 @@ PRODUCT_PACKAGES += \
     init.qcom.devwait.sh \
     ueventd.mako.rc
 
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/fstab.mako:$(TARGET_COPY_OUT_RAMDISK)/fstab.mako
+
 # Recorder
 PRODUCT_PACKAGES += \
     Recorder
