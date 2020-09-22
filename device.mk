@@ -121,6 +121,9 @@ PRODUCT_PACKAGES += \
     android.hardware.gnss@1.0-impl.legacy  \
     android.hardware.gnss@1.0-service.legacy
 
+# HIDL
+PRODUCT_ENFORCE_VINTF_MANIFEST_OVERRIDE := true
+
 # Keylayouts
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/keylayout/apq8064-tabla-snd-card_Button_Jack.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/apq8064-tabla-snd-card_Button_Jack.kl \
