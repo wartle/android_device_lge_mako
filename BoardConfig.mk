@@ -131,6 +131,9 @@ TARGET_NEEDS_PLATFORM_TEXT_RELOCATIONS := true
 # Healthd
 BOARD_CHARGER_ENABLE_SUSPEND := true
 
+# Legacy memfd
+TARGET_HAS_MEMFD_BACKPORT := true
+
 # Exclude serif fonts for saving system.img size.
 EXCLUDE_SERIF_FONTS := true
 
