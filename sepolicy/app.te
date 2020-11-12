@@ -1,1 +1,3 @@
 allow { appdomain -isolated_app } sysfs_graphics:file r_file_perms;
+
+get_prop(appdomain, exported_camera_prop);
