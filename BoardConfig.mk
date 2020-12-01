@@ -135,6 +135,9 @@ TARGET_NEEDS_PLATFORM_TEXT_RELOCATIONS := true
 # Legacy memfd
 TARGET_HAS_MEMFD_BACKPORT := true
 
+# Dedupe VNDK libraries with identical core variants.
+TARGET_VNDK_USE_CORE_VARIANT := true
+
 # Recovery
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/etc/fstab.mako
 
