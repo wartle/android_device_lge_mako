@@ -245,7 +245,7 @@ service mpdecision /vendor/bin/mpdecision --no_sleep --avg_comp
     group root readproc system
 
 service qcamerasvr /vendor/bin/mm-qcamera-daemon
-    class late_start
+    class early_hal
     user camera
     group camera system inet input
 
