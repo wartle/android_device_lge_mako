@@ -237,11 +237,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     Recorder
 
-# Releasetools
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/prebuilt/bin/parted:install/bin/parted \
-    $(LOCAL_PATH)/prebuilt/bin/sizecheck.sh:install/bin/sizecheck.sh
-
 # RenderScript HAL
 PRODUCT_PACKAGES += \
     android.hardware.renderscript@1.0-impl
