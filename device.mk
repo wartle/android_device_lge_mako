@@ -227,6 +227,9 @@ PRODUCT_PACKAGES += \
     android.hardware.power@1.0-impl \
     android.hardware.power@1.0-service.mako
 
+# Properties
+include $(LOCAL_PATH)/system_prop.mk
+
 # Ramdisk
 PRODUCT_PACKAGES += \
     fstab.mako \
