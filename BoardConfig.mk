@@ -118,7 +118,8 @@ BOARD_VENDOR_QCOM_LOC_PDK_FEATURE_SET := true
 
 # SeLinux Policy
 include device/qcom/sepolicy-legacy/sepolicy.mk
-BOARD_VENDOR_SEPOLICY_DIRS += $(PLATFORM_PATH)/sepolicy
+BOARD_VENDOR_SEPOLICY_DIRS += $(PLATFORM_PATH)/sepolicy/vendor
+PRODUCT_PRIVATE_SEPOLICY_DIRS += $(PLATFORM_PATH)/sepolicy/private
 
 # Camera
 TARGET_PROCESS_SDK_VERSION_OVERRIDE := \
