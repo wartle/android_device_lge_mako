@@ -41,7 +41,7 @@ PRODUCT_AAPT_PREBUILT_DPI := hdpi
 PRODUCT_MINIMIZE_JAVA_DEBUG_INFO := true
 
 # Speed profile services and wifi-service to reduce RAM and storage.
-PRODUCT_SYSTEM_SERVER_COMPILER_FILTER := speed-profile
+#PRODUCT_SYSTEM_SERVER_COMPILER_FILTER := speed-profile
 
 # Always preopt extracted APKs to prevent extracting out of the APK
 # for gms modules.
