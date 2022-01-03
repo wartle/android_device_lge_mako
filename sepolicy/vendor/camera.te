@@ -23,8 +23,8 @@ allow camera gpu_device:chr_file rw_file_perms;
 
 # Connect to sensor socket
 unix_socket_connect(camera, sensors, sensors)
-allow camera sensors_socket:dir search;
-allow camera sensors_socket:sock_file read;
+allow camera sensors_socket:dir r_dir_perms;
+allow camera sensors_socket:sock_file r_file_perms;
 
 # Interact with /data
 allow camera apk_data_file:dir rw_dir_perms;

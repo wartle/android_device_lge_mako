@@ -1,7 +1,7 @@
 # Allow access to Qualcomm MSM Interface (QMI) sockets
 unix_socket_connect(hal_audio_default, qmuxd, qmuxd)
 allow hal_audio_default qmuxd_socket:dir w_dir_perms;
-allow hal_audio_default qmuxd_socket:sock_file { create setattr };
+allow hal_audio_default qmuxd_socket:sock_file { create setattr link unlink };
 
 # Allow socket creation
 allow hal_audio_default self:socket create_socket_perms;
