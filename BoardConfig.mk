@@ -121,8 +121,6 @@ include device/qcom/sepolicy-legacy/sepolicy.mk
 BOARD_VENDOR_SEPOLICY_DIRS += $(PLATFORM_PATH)/sepolicy
 
 # Camera
-MALLOC_SVELTE_FOR_LIBC32 := true
-
 TARGET_PROCESS_SDK_VERSION_OVERRIDE := \
     /system/bin/cameraserver=22 \
     /system/bin/mediaserver=22 \
