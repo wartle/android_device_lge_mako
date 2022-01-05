@@ -18,7 +18,7 @@
 # Inherit from vendor
 -include vendor/lge/mako/BoardConfigVendor.mk
 
-# Platform Path
+# Device Path
 DEVICE_PATH := device/lge/mako
 
 # CPU
@@ -93,7 +93,6 @@ TARGET_ADDITIONAL_GRALLOC_10_USAGE_BITS := 0x2000U | 0x02000000U
 TARGET_DISABLE_POSTRENDER_CLEANUP := true
 
 # Dexpreopt
-WITH_DEXPREOPT_BOOT_IMG_AND_SYSTEM_SERVER_ONLY := true
 WITH_DEXPREOPT_DEBUG_INFO := false
 
 # Filesystem
@@ -124,7 +123,6 @@ PRODUCT_PRIVATE_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/private
 # Camera
 TARGET_PROCESS_SDK_VERSION_OVERRIDE := \
     /system/bin/cameraserver=22 \
-    /system/bin/mediaserver=22 \
     /system/vendor/bin/mm-qcamera-daemon=22
 
 # Text Relocations
