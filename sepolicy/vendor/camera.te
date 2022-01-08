@@ -17,7 +17,8 @@ allow camera { surfaceflinger mediaserver cameraserver hal_graphics_allocator ha
 allow camera camera_socket:dir w_dir_perms;
 allow camera camera_socket:sock_file create_file_perms;
 
-type_transition camera system_data_file:file camera_data_file "fdAlbum";
+type_transition camera system_data_root_file:file camera_data_file "fdAlbum";
+allow camera system_data_root_file:dir w_dir_perms;
 allow camera camera_data_file:file create_file_perms;
 allow camera gpu_device:chr_file rw_file_perms;
 
