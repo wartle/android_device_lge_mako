@@ -18,7 +18,6 @@
 -->
 <device name="Android">
     <!-- All values are in mAh except as noted -->
-    <item name="none">0</item>
     <item name="screen.on">98.19</item>
     <item name="screen.full">211.6</item>
     <item name="bluetooth.active">59.22</item>
@@ -26,8 +25,10 @@
     <item name="wifi.on">1.38</item>
     <item name="wifi.active">62.09</item>
     <item name="wifi.scan">52.1</item>
-    <item name="dsp.audio">0.1</item>
-    <item name="dsp.video">0.1</item>
+    <item name="audio">26.71</item>
+    <item name="video">69.53</item>
+    <item name="camera.flashlight">231.88</item>
+    <item name="camera.avg">343.67</item>
     <item name="gps.on">70.05</item>
     <item name="radio.active">185.6</item>
     <!-- The current consumed by the radio when it is scanning for a signal -->
