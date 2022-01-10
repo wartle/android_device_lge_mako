@@ -71,6 +71,14 @@
         <value>237.52</value> <!-- 1458 MHz CPU speed -->
         <value>247.18</value> <!-- 1512 MHz CPU speed -->
     </array>
+    <!-- mA.  Current figures based on .0801 s/c and 75.48mA while scanning -->
+    <array name="wifi.batchedscan">
+        <value>0.0002</value>    <!-- 1-8/hr -->
+        <value>0.002</value>     <!-- 9-64/hr -->
+        <value>0.02</value>      <!-- 65-512/hr -->
+        <value>.2</value>        <!-- 513-4096/hr -->
+        <value>2</value>         <!-- 4097-?/hr -->
+    </array>
     <!-- This is the battery capacity in mAh -->
     <item name="battery.capacity">2100</item>
 </device>
