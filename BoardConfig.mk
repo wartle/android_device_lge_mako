@@ -128,10 +128,6 @@ TARGET_NEEDS_PLATFORM_TEXT_RELOCATIONS := true
 # Legacy memfd
 TARGET_HAS_MEMFD_BACKPORT := true
 
-# Fonts
-EXCLUDE_SERIF_FONTS := true
-SMALLER_FONT_FOOTPRINT := true
-
 # Recovery
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/etc/fstab.mako
 
