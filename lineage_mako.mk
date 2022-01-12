@@ -2,6 +2,9 @@
 TARGET_SCREEN_HEIGHT := 1280
 TARGET_SCREEN_WIDTH := 768
 
+# Lineage Charger
+WITH_LINEAGE_CHARGER := false
+
 # Use the go specific handheld_core_hardware.xml from frameworks
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/go_handheld_core_hardware.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/handheld_core_hardware.xml
