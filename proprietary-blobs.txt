@@ -21,11 +21,6 @@ vendor/firmware/dsps.b03
 vendor/firmware/dsps.b04
 vendor/firmware/dsps.b05
 vendor/firmware/dsps.mdt
-vendor/firmware/keymaster/keymaster.b00
-vendor/firmware/keymaster/keymaster.b01
-vendor/firmware/keymaster/keymaster.b02
-vendor/firmware/keymaster/keymaster.b03
-vendor/firmware/keymaster/keymaster.mdt
 vendor/firmware/q6.b00
 vendor/firmware/q6.b01
 vendor/firmware/q6.b03
