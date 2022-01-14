@@ -36,4 +36,4 @@ allow kickstart toolbox_exec:file rx_file_perms;
 wakelock_use(kickstart)
 
 # Read tombstones
-r_dir_file(kickstart, tombstone_data_file)
+r_dir_file(kickstart, vendor_tombstone_data_file)

@@ -209,7 +209,7 @@ service qmuxd /vendor/bin/qmuxd
     user radio
     group radio audio bluetooth gps wakelock
 
-service kickstart /vendor/bin/qcks -i /firmware/image/ -r /data/tombstones/mdm/
+service kickstart /vendor/bin/qcks -i /firmware/image/ -r /data/vendor/tombstones/mdm/
     class core
     user system
     group system wakelock
