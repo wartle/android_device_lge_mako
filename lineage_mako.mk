@@ -5,13 +5,6 @@ TARGET_SCREEN_WIDTH := 768
 # Lineage Charger
 WITH_LINEAGE_CHARGER := false
 
-# Dexpreopt
-WITH_DEXPREOPT_BOOT_IMG_AND_SYSTEM_SERVER_ONLY := true
-WITH_DEXPREOPT_DEBUG_INFO := false
-
-# The target has no boot jars to check
-SKIP_BOOT_JARS_CHECK := true
-
 # Inherit from the common product configuration
 $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
 
