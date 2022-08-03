@@ -6,8 +6,8 @@ allow bluetooth_loader bluetooth_loader_exec:file rx_file_perms;
 allow bluetooth_loader devpts:chr_file rw_file_perms;
 
 # Run hci_qcomm_init from init.mako.bt.sh
-domain_auto_trans(bluetooth_loader, hci_attach_exec, hci_attach)
-allow hci_attach bluetooth_loader:fd use;
+domain_auto_trans(bluetooth_loader, bluetooth_loader_exec, bluetooth_loader)
+allow bluetooth_loader bluetooth_loader:fd use;
 
 # Read mac address from persist partition
 allow bluetooth_loader persist_file:dir search;

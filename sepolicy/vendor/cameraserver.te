@@ -1,4 +1,4 @@
-unix_socket_send(cameraserver, camera, camera);
+unix_socket_send(cameraserver, camera, mm-qcamerad);
 unix_socket_send(cameraserver, mpdecision, mpdecision);
 
 # for libmmjpeg

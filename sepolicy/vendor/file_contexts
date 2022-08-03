@@ -11,15 +11,6 @@
 # shared memory drivers
 /dev/smdcntl[0-7]                      u:object_r:radio_device:s0
 
-# Bluetooth shared memory interfaces
-/dev/smd2                              u:object_r:hci_attach_dev:s0
-/dev/smd3                              u:object_r:hci_attach_dev:s0
-# Default label for shared memory drivers
-/dev/smd([0-9])+                       u:object_r:smd_device:s0
-
-# Serial console
-/dev/ttyHS0                            u:object_r:hci_attach_dev:s0
-
 # Serial-to-Usb support
 /dev/ttyUSB0                           u:object_r:radio_device:s0
 
@@ -58,34 +49,26 @@
 /data/vendor/qcks(/.*)?                u:object_r:kickstart_vendor_data_file:s0
 /data/vendor/sensors(/.*)?             u:object_r:sensors_vendor_data_file:s0
 
-# Binary executables
-/system/vendor/bin/hci_qcomm_init      u:object_r:hci_attach_exec:s0
-/system/vendor/bin/mm-qcamera-daemon   u:object_r:camera_exec:s0
-/system/vendor/bin/mpdecision          u:object_r:mpdecision_exec:s0
-/system/vendor/bin/netmgrd             u:object_r:netmgrd_exec:s0
-/system/vendor/bin/qmuxd               u:object_r:qmuxd_exec:s0
-/system/vendor/bin/qseecomd            u:object_r:tee_exec:s0
-/system/vendor/bin/sensors\.qcom       u:object_r:sensors_exec:s0
-/system/vendor/bin/thermald            u:object_r:thermald_exec:s0
-/system/vendor/bin/bdAddrLoader        u:object_r:bluetooth_loader_exec:s0
-/system/vendor/bin/efsks               u:object_r:kickstart_exec:s0
-/system/vendor/bin/ks                  u:object_r:kickstart_exec:s0
-/system/vendor/bin/qcks                u:object_r:kickstart_exec:s0
-
-# Scripts
-/system/vendor/bin/init\.mako\.bt\.sh          u:object_r:bluetooth_loader_exec:s0
-/system/vendor/bin/init\.qcom\.devstart\.sh    u:object_r:init-qcom-devstart-sh_exec:s0
-/system/vendor/bin/init\.qcom\.devwait\.sh     u:object_r:init-qcom-devwait-sh_exec:s0
-
-# Binderized HAL's
-/system/vendor/bin/hw/android\.hardware\.light@2\.0-service\.mako           u:object_r:hal_light_default_exec:s0
-/system/vendor/bin/hw/android\.hardware\.power@1\.0-service\.mako           u:object_r:hal_power_default_exec:s0
-/system/vendor/bin/hw/android\.hardware\.power\.stats@1\.0-service\.mock    u:object_r:hal_power_stats_default_exec:s0
-
-# Gatekeeper
-/(vendor|system/vendor)/bin/hw/android\.hardware\.gatekeeper@1\.0-service\.software			u:object_r:hal_gatekeeper_default_exec:s0
-
 # Persist firmware filesystem
 /persist/playready(/.*)?               u:object_r:persist_drm_file:s0
 /persist/widevine(/.*)?                u:object_r:persist_drm_file:s0
 /persist/wifi(/.*)?                    u:object_r:persist_wifi_file:s0
+
+# Binary executables
+/(vendor|system/vendor)/bin/bdAddrLoader        u:object_r:bluetooth_loader_exec:s0
+/(vendor|system/vendor)/bin/efsks               u:object_r:mdm_helper_exec:s0
+/(vendor|system/vendor)/bin/qcks                u:object_r:mdm_helper_exec:s0
+/(vendor|system/vendor)/bin/thermald            u:object_r:thermal-engine_exec:s0
+
+# Scripts
+/(vendor|system/vendor)/bin/init\.mako\.bt\.sh          u:object_r:bluetooth_loader_exec:s0
+/(vendor|system/vendor)/bin/init\.qcom\.devstart\.sh    u:object_r:init-qcom-devstart-sh_exec:s0
+/(vendor|system/vendor)/bin/init\.qcom\.devwait\.sh     u:object_r:init-qcom-devwait-sh_exec:s0
+
+# Binderized HAL's
+/(vendor|system/vendor)/bin/hw/android\.hardware\.light@2\.0-service\.mako           u:object_r:hal_light_default_exec:s0
+/(vendor|system/vendor)/bin/hw/android\.hardware\.power@1\.0-service\.mako           u:object_r:hal_power_default_exec:s0
+/(vendor|system/vendor)/bin/hw/android\.hardware\.power\.stats@1\.0-service\.mock    u:object_r:hal_power_stats_default_exec:s0
+
+# Gatekeeper
+/(vendor|system/vendor)/bin/hw/android\.hardware\.gatekeeper@1\.0-service\.software			u:object_r:hal_gatekeeper_default_exec:s0

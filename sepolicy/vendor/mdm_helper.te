@@ -1,0 +1,33 @@
+# Spawn /system/bin/efsks and /system/bin/ks
+allow mdm_helper mdm_helper_exec:file { open execute_no_trans getattr };
+
+# Let qcks access /dev/mdm node (modem driver)
+allow mdm_helper mdm_device:chr_file r_file_perms;
+
+# Access USB host ks bridge drivers
+allow mdm_helper efsbridgehsic_device:chr_file rw_file_perms;
+allow mdm_helper ksbridgehsic_device:chr_file rw_file_perms;
+allow mdm_helper usbfs:dir search;
+
+# Read and write to /dev/block/mmcblk0p[89]
+allow mdm_helper efs_boot_dev:blk_file rw_file_perms;
+allow mdm_helper block_device:dir { getattr write search };
+
+# Write contents of block device to kickstart data dir
+allow mdm_helper kickstart_vendor_data_file:file create_file_perms;
+allow mdm_helper kickstart_vendor_data_file:dir rw_dir_perms;
+
+# Read radio firmware file(s)
+allow mdm_helper radio_efs_file:dir search;
+allow mdm_helper radio_efs_file:file r_file_perms;
+
+# Run dd from toolbox on firmware files
+allow mdm_helper shell_exec:file rx_file_perms;
+allow mdm_helper system_file:file execute_no_trans;
+allow mdm_helper toolbox_exec:file rx_file_perms;
+
+# Wake lock access
+wakelock_use(mdm_helper)
+
+# Read tombstones
+r_dir_file(mdm_helper, vendor_tombstone_data_file)

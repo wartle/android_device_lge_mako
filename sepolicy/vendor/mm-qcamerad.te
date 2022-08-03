@@ -1,0 +1,29 @@
+# Text relocations in libmmjpeg
+allow mm-qcamerad vendor_file:file execmod;
+
+# Interact with other media devices
+allow mm-qcamerad video_device:dir search;
+allow mm-qcamerad { gpu_device video_device ion_device }:chr_file rw_file_perms;
+allow mm-qcamerad { surfaceflinger mediaserver cameraserver hal_graphics_allocator hal_camera_default }:fd use;
+
+# Create camera sockets
+allow mm-qcamerad camera_socket:dir w_dir_perms;
+allow mm-qcamerad camera_socket:sock_file create_file_perms;
+
+allow mm-qcamerad system_data_root_file:dir w_dir_perms;
+allow mm-qcamerad camera_data_file:file create_file_perms;
+allow mm-qcamerad gpu_device:chr_file rw_file_perms;
+
+# Connect to sensor socket
+unix_socket_connect(mm-qcamerad, sensors, sensors)
+allow mm-qcamerad sensors_socket:dir r_dir_perms;
+allow mm-qcamerad sensors_socket:sock_file r_file_perms;
+
+# Interact with /data
+allow mm-qcamerad apk_data_file:dir rw_dir_perms;
+allow mm-qcamerad storage_file:dir rw_dir_perms;
+allow mm-qcamerad storage_file:lnk_file rw_file_perms;
+allow mm-qcamerad mnt_user_file:dir rw_dir_perms;
+allow mm-qcamerad fuse:dir rw_dir_perms;
+
+r_dir_file(mm-qcamerad, camera_prop)
