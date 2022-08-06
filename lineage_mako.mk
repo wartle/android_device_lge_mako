@@ -9,15 +9,12 @@ WITH_LINEAGE_CHARGER := false
 $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
 
 # Inherit from the Lineage vendor
-$(call inherit-product, vendor/lineage/config/common_mini_go_phone.mk)
+$(call inherit-product, vendor/lineage/config/common_mini_phone.mk)
 $(call inherit-product, vendor/lineage/build/target/product/product_launched_with_j_mr1.mk)
 
 # Inherit from hardware-specific part of the product configuration
 $(call inherit-product, device/lge/mako/device.mk)
 $(call inherit-product, vendor/lge/mako/mako-vendor.mk)
-
-# Common Android Go configurations
-$(call inherit-product, build/target/product/go_defaults.mk)
 
 # Dalvik (2 GB configuration)
 $(call inherit-product, frameworks/native/build/phone-xhdpi-2048-dalvik-heap.mk)
@@ -28,8 +25,6 @@ PRODUCT_NAME := lineage_mako
 PRODUCT_BRAND := google
 PRODUCT_MODEL := Nexus 4
 PRODUCT_MANUFACTURER := LGE
-
-PRODUCT_GMS_CLIENTID_BASE := android-google
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
     PRODUCT_NAME=occam \
