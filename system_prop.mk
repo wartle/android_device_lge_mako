@@ -29,8 +29,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Graphics
 PRODUCT_PROPERTY_OVERRIDES += \
-    debug.sf.disable_backpressure=1 \
-    debug.sf.latch_unsignaled=1 \
     ro.opengles.version=196608 \
     persist.hwc.mdpcomp.enable=true \
     debug.hwui.use_buffer_age=false
