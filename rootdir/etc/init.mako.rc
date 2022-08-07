@@ -209,7 +209,7 @@ on property:vendor.bluetooth.hciattach=false
 service qmuxd /vendor/bin/qmuxd
     class main
     user radio
-    group radio audio bluetooth gps wakelock
+    group radio audio bluetooth gps diag wakelock log
 
 service kickstart /vendor/bin/qcks -i /firmware/image/ -r /data/vendor/tombstones/mdm/
     class core

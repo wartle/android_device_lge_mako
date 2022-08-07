@@ -33,6 +33,9 @@ subsystem msm_camera
     devname uevent_devpath
     dirname /dev/msm_camera
 
+# the DIAG device node is not world writable/readable.
+/dev/diag                 0666   system     diag
+
 /dev/cpu_dma_latency      0660   system     system
 /dev/alarm                0664   system     radio
 /dev/genlock              0666   system     system
